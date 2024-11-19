@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<meta charset="utf-8">
+	<title>Artigos esportivos</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+<script>
+       function mensagem()
+          { alert('Voçê será direcionado para a pagina de cadastro de anuncios'); }
+        document.addEventListener('DOMContentLoaded',
+           function(event){
+              var parag=document.querySelector("#frase");
+              parag.onclick=mensagem;
+           },false);
+</script>
+</head>
+
+<header>
+	    <body bgcolor="#FAF0E6">
+		<h1 class="text-success text-center" >Artigos esportivos</h1>
+	    <h2 class="text-success text-center" >Camisas - Bolas - Bonés - Bandeiras</h2>
+</header>
+
+<body>
+        <section class="container">
+	    <div class="form-group col-md-12"style="text-align:center;">
+	    <h6>Click aqui e anuncie</h6>
+        <a href= "formulario_anuncios.html"><div style="text-align:center"><img src="img/anuncie.png"></a>
+</section>
+</div>
+
+<main>
+	<section class="container">
+	<div class="form-row">
+    <div class="form-group col-md-6"style="text-align: center;">
+	<dd class="col-sm-9">
+			<img src="img/camisa.png" class="img-produtos">
+			<h1>&emsp; Camisa da seleção</h1>
+			<a href="formulario_anuncios.html">
+			<p>&emsp; &emsp; + Detalhes</p>
+</a>
+</div>	
+
+	<div class="form-group col-md-6"style="text-align: center;">
+	<dd class="col-sm-9">
+			<img src="img/bone.png" class="img-produtos">
+			<h1>&emsp; Boné</h1>
+			<a href="formulario_anuncios.html">
+			<p>&emsp; &emsp; + Detalhes</p>
+</a>
+</div>
+
+	<div class="form-group col-md-6"style="text-align: center;">
+	<dd class="col-sm-9">
+			<img src="img/bola.png" class="img-produtos">
+			<h1>Bola</h1>
+			<a href="formulario_anuncios.html">
+			<p>+ Detalhes</p>
+</a>
+</div>
+
+	<div class="form-group col-md-6"style="text-align: center;">
+	<dd class="col-sm-9">
+			<img src="img/bandeira.png" class="img-produtos">
+			<h1>&emsp; Bandeira do Brasil</h1>
+			<a href="formulario_anuncios.html">
+			<p>  + Detalhes</p>
+</a>
+</div>
+</section>
+</main>
+
+
+</body>
+
+    <script type="text/javascript">
+	
+    var link = document.querySelectorAll("a");
+    for (let i = 0; i < link.length; i++) 
+    {link[i].addEventListener("click", mensagem, false);}
+	
+</script>
+</html>

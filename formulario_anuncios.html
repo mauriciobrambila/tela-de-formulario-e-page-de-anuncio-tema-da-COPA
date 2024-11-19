@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  	<title>Formulario de anuncios</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+   	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="Mascaras e valida CPF.js"></script>
+	
+<script>
+       function mensagem()
+          { alert('Voçê será direcionado para visualizar seu anuncio '); }
+        document.addEventListener('DOMContentLoaded',
+           function(event){
+              var parag=document.querySelector("#frase");
+              parag.onclick=mensagem;
+           },false);
+</script>
+</head>
+  	
+    <body background ="img/taça1.png">
+
+<div class="card bg-info text-white">
+   <div class="card-body">
+     <h1 class="card-title"><center>Formulário de anuncios esportivos</center></h1>
+
+</div>
+</div> 	
+	
+	
+	<h6><center>Preencha seu cadastro</center></h6>
+<br><br>
+	
+<form>
+ 
+    <div class="form-row">
+    <div class="form-group col-md-6"style="text-align: center;">
+	<dd class="col-sm-9">
+	    <label for="nome" class="font-weight-bold">Nome</label>
+        <input type="text" id="Nome" class="form-control" placeholder="digite seu nome" required>
+</div>
+
+    <div class="form-group col-md-5"style="text-align: center;">
+        <label for="sobrenome" class="font-weight-bold">Sobrenome</label>
+        <input type="text" class="form-control" id="sobrenome" placeholder="digite seu sobrenome" required>
+</div>
+
+    <div class="form-group col-md-6"style="text-align: center;">
+	<dd class="col-sm-9">
+        <label for="entre com e-mail" class="font-weight-bold">E-mail</label>
+       	<div method="post" action="" onSubmit="return ( verifica() )" name="frmEnvia">
+        <input name="email" type="text" class="form-control" class="input" id="email" placeholder="nome@email.com" onblur="checarEmail();"/>
+</div>
+</div>
+
+    <div class="form-group col-md-2"style="text-align: center;">
+        <label for="entre com a senha" class="font-weight-bold">Senha</label>
+        <input type="senha" class="form-control" id="entre com a senha" placeholder="           1234#Abc" required>
+</div>
+
+    <div class="form-group col-md-2"style="text-align: center;">
+        <label for="confirme sua senha" class="font-weight-bold">Confirme sua senha</label>
+        <input type="senha" class="form-control" id="confirme sua a senha" placeholder="           1234#Abc" required>
+</div>
+</div>
+
+    <div class="form-row">
+    <div class="form-group col-md-3"style="text-align: center;">
+	<dd class="col-sm-9">
+    <label for="iCPF" class="font-weight-bold">Digite seu CPF:</label><br/>
+    <input class="form-control" type="text" id="iCPF" placeholder="      ###.###.###-##" onkeypress="mCpf()" maxlength="14" onblur="validarCPF()"/>
+</div>
+
+     <div class="form-group col-md-3">
+	 <dd class="col-sm-9">
+        <label for="iCelular" class="font-weight-bold">Digite seu fone com prefixo</label><br/>
+        <input class="form-control" type="text" id="iCelular" placeholder="      (##)#####-####" onkeyup="mascara('(##)#####-####',this,event)" />
+</div>
+
+    <div class="form-group col-md-2"style="text-align: center;">
+	    <label for="iCEP" class="font-weight-bold">CEP:</label>
+        <input class="form-control" type="text" id="iCEP" placeholder="            00.000-000" onkeyup="mCEP()" maxlength="10" />
+</div>
+
+    <div class="form-group col-md-3"style="text-align: center;">
+	    <label for="cidade" class="font-weight-bold">Cidade</label>
+        <input type="text" class="form-control" id="digite sua cidade" placeholder="digite sua cidade">
+</div>
+<br><br><br><br>
+		 
+    <div class="form-group col-md-12" style="text-align: center;">
+	    <h2><for= class="font-weight-bold" style="color:red;">Escolha o anuncio</h2>
+</div>
+<br><br><br><br>
+
+    <div class="form-group col-md-6">
+    <label><strong>&emsp;Tipo de anuncio:&ensp;</strong></label>
+    <input type='radio' name='seleçao' value='A'>Vestuario</input>
+    <input type='radio' name='seleçao' value='B'>Acessorios</input>
+	<div class="form-group col-md-6">
+    <label><strong>Sexo:</strong></label>
+    <input type='radio' name='seleçao' value='A'>Masculino</input>
+    <input type='radio' name='seleçao' value='B'>Feminino</input>
+    <div class="form-group col-md-8">
+    <label><strong>&emsp; &emsp; Selecione</strong></label>
+    <select id>
+        <option>Camisa da seleção</option>
+        <option>Short</option>
+        <option>Meia</option> 
+		<option>Bone</option> 
+		<option>Bandeira</option> 
+		<option>Corneta</option> 
+		<option>Confete</option> 
+		<option>Apito</option> 
+</select>
+</div>
+</div>
+</div>	
+</div>
+
+<div>
+    <center><h3 style="color: green;">** Descreva seu anuncio **</h3><center>
+    <textarea rows="5" cols="70"></textarea>
+</div>
+
+    <div class="form-group col-md-8">
+	<label><strong>&ensp;Adicionar fotos</strong></label><br>
+	<input id="arquivo" name="arquivo" class="input-file" type="file">
+</div>
+
+<div>
+    <label class="font-weight-bold">&emsp;Anunciar em mais locais:</label>
+    <input type="checkbox" id="tecnologia1" value="HTML">
+    <label type="tecnologia1">Facebook</label>
+    <input type="checkbox" id="tecnologia2" value="CSS">
+    <label type="tecnologia2">Mercado Livre</label>
+    <input type="checkbox" id="tecnologia3" value="javascript">
+    <label type="tecnologia3">OLX</label>
+    <input type="checkbox" id="tecnologia4" value="PHP">
+    <label type="tecnologia4">Instagram</label>
+    <input type="checkbox" id="tecnologia5" value="C#">
+    <label type="tecnologia5">Jornais</label>
+    <input type="checkbox" id="tecnologia6" value="python">
+</div>
+
+<div>
+        <label for="ivalor"</label>
+		<label><strong>&emsp;Valor do anuncio anuncio:&ensp;</strong></label>
+		<select id>
+        <option>1 anuncio  - 10,99</option>
+        <option>2 anuncios - 18,99</option> 
+		<option>3 anuncios - 24,99</option> 
+		<option>4 anuncios - 28,99</option> 
+		<option>5 anuncios - 30,99</option> 
+</select>
+
+		<div class="form-group col-md-4" style="text-align: center;">
+        <input type="text" class="form-control" id="ivalor" onkeypress="mMoeda(00,00)" placeholder="00,00" " maxlength="8" />
+</div>
+</div>		
+
+  <div class="custom-control custom-checkbox mr-sm-2"style="text-align: center;">
+        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+		<label class="custom-control-label" for="customControlAutosizing">Lembrar preferências</label>
+		
+</div>
+<br>
+
+    <div class="col-auto my-2">	
+    <div class="col-lg-14" style="text-align: center;">
+	<button type="submit" class="btn btn-primary">Enviar</button>
+</div>
+</div>
+<br>
+
+    <b><center>Nos siga em nossas redes sociais</center></b>
+	<div class="form-group col-md-3"style="text-align: center;">
+		    <a href="https://api.whatsapp.com/send?phone=55( )0000*0000&text=Olá, Gostaria de fazer um pedido">
+			<img src="img/whats.png" style="left: 500px; top: 50px; position: absolute" width="110" height="84">
+</a>
+    <div class="form-group col-md-3"style="text-align: center;">
+		    <a href="https://www.facebook.com/">
+		    <img src="img/facebook.png" style="left: 750px; top: 45px; position: absolute" width="110" height="84">	
+</a>
+    <div class="form-group col-md-6"style="text-align: center;">
+			<a href="https://www.instagram.com/">
+		    <img src="img/instagram.png" style="left: 600px; top: 25px; position: absolute" width="110" height="84">	
+</a>
+</div>
+
+<div>
+
+    <label for=""</label>
+    <label><strong>&emsp;Click aqui e veja seu anuncio&ensp;</strong></label>
+    <a href= "Pagina do anuncio.html"><div style="text-align:center"><img src="img/seuanuncio.png"></a>
+</div>
+
+</form>
+</body>
+
+    <script type="text/javascript">
+	
+    var link = document.querySelectorAll("a");
+    for (let i = 0; i < link.length; i++) 
+    {link[i].addEventListener("click", mensagem, false);}
+	
+</script>
+</html>
+
+
+
+
+ 
+   
+   
+   
+   
+   
+   
+   
+   
+   
